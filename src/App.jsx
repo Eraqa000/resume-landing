@@ -1,71 +1,53 @@
-import React from 'react';
-import { FaMapMarkerAlt, FaTelegramPlane, FaEnvelope, FaBriefcase, FaCode, FaUniversity, FaLanguage } from 'react-icons/fa';
+import { FaMapMarkerAlt, FaEnvelope, FaGithub, FaGraduationCap, FaBriefcase, FaCode, FaBrain, FaGlobe } from "react-icons/fa";
 
 export default function App() {
   return (
-    <div className="min-h-screen bg-gradient-to-r from-blue-50 to-purple-100 p-6">
-      <div className="max-w-4xl mx-auto bg-white rounded-2xl shadow-2xl p-8">
-        <header className="mb-6 border-b pb-4">
-          <h1 className="text-4xl font-bold text-indigo-700">Ера</h1>
-          <p className="text-gray-600 flex items-center mt-2">
-            <FaMapMarkerAlt className="mr-2" /> Алматы
-          </p>
-          <p className="text-gray-600 flex items-center">
-            <FaEnvelope className="mr-2" /> your@email.com
-          </p>
-          <p className="text-gray-600 flex items-center">
-            <FaTelegramPlane className="mr-2" /> @yourhandle
-          </p>
+    <div className="min-h-screen bg-gradient-to-br from-gray-100 to-gray-200 dark:from-gray-900 dark:to-gray-800 text-gray-900 dark:text-white px-4 py-8">
+      <div className="max-w-3xl mx-auto bg-white dark:bg-gray-900 rounded-2xl shadow-2xl p-8 space-y-6">
+        <header className="space-y-1">
+          <h1 className="text-4xl font-bold text-cyan-600 dark:text-cyan-400">Ера</h1>
+          <div className="flex items-center gap-2 text-sm text-gray-600 dark:text-gray-300">
+            <FaMapMarkerAlt /> Алматы
+          </div>
+          <div className="flex items-center gap-2 text-sm text-gray-600 dark:text-gray-300">
+            <FaEnvelope /> your@email.com
+          </div>
+          <div className="flex items-center gap-2 text-sm text-gray-600 dark:text-gray-300">
+            <FaGithub /> @yourhandle
+          </div>
         </header>
 
-        <section className="mb-6">
-          <h2 className="text-2xl font-semibold text-indigo-600 flex items-center mb-2">
-            <FaUniversity className="mr-2" /> Образование
-          </h2>
+        <section>
+          <h2 className="text-xl font-semibold flex items-center gap-2 text-cyan-700 dark:text-cyan-300"><FaGraduationCap /> Образование</h2>
           <p>КазНУ им. Аль-Фараби, ИТ факультет (2 курс)</p>
         </section>
 
-        <section className="mb-6">
-          <h2 className="text-2xl font-semibold text-indigo-600 flex items-center mb-2">
-            <FaBriefcase className="mr-2" /> Опыт работы
-          </h2>
-          <ul className="list-disc list-inside space-y-1">
+        <section>
+          <h2 className="text-xl font-semibold flex items-center gap-2 text-cyan-700 dark:text-cyan-300"><FaBriefcase /> Опыт работы</h2>
+          <ul className="list-disc ml-6 space-y-1">
             <li>Установщик линз, детейлинг-центр (2023)</li>
             <li>Специалист отдела продаж (2023)</li>
           </ul>
         </section>
 
-        <section className="mb-6">
-          <h2 className="text-2xl font-semibold text-indigo-600 flex items-center mb-2">
-            <FaCode className="mr-2" /> Проекты
-          </h2>
-          <ul className="list-disc list-inside space-y-1">
+        <section>
+          <h2 className="text-xl font-semibold flex items-center gap-2 text-cyan-700 dark:text-cyan-300"><FaCode /> Проекты</h2>
+          <ul className="list-disc ml-6 space-y-1">
             <li>2-3 сайта: HTML, CSS, JavaScript</li>
             <li>Telegram-боты на Python</li>
           </ul>
         </section>
 
-        <section className="mb-6">
-          <h2 className="text-2xl font-semibold text-indigo-600 flex items-center mb-2">
-            <FaCode className="mr-2" /> Навыки
-          </h2>
-          <p className="leading-relaxed">
-            Python, Java, C++, HTML, CSS, JavaScript, SQL, Git
-          </p>
+        <section>
+          <h2 className="text-xl font-semibold flex items-center gap-2 text-cyan-700 dark:text-cyan-300"><FaBrain /> Навыки</h2>
+          <p>Python, Java, C++, HTML, CSS, JavaScript, SQL, Git</p>
         </section>
 
-        <section className="mb-6">
-          <h2 className="text-2xl font-semibold text-indigo-600 flex items-center mb-2">
-            <FaLanguage className="mr-2" /> Языки
-          </h2>
+        <section>
+          <h2 className="text-xl font-semibold flex items-center gap-2 text-cyan-700 dark:text-cyan-300"><FaGlobe /> Языки</h2>
           <p>Казахский (родной), Русский (свободно), Английский (Pre-Intermediate)</p>
+          <p>Готов к работе онлайн и офлайн (график 2/2)</p>
         </section>
-
-        <footer className="pt-4 border-t mt-6">
-          <p className="text-center text-gray-500">
-            Готов к работе онлайн и оффлайн (график 2/2)
-          </p>
-        </footer>
       </div>
     </div>
   );
