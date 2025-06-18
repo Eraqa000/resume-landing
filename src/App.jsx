@@ -1,53 +1,70 @@
-import { FaMapMarkerAlt, FaEnvelope, FaGithub, FaGraduationCap, FaBriefcase, FaCode, FaBrain, FaGlobe } from "react-icons/fa";
+import React from "react";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent } from "@/components/ui/card";
+import { motion } from "framer-motion";
 
-export default function App() {
+export default function ResumeLanding() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-100 to-gray-200 dark:from-gray-900 dark:to-gray-800 text-gray-900 dark:text-white px-4 py-8">
-      <div className="max-w-3xl mx-auto bg-white dark:bg-gray-900 rounded-2xl shadow-2xl p-8 space-y-6">
-        <header className="space-y-1">
-          <h1 className="text-4xl font-bold text-cyan-600 dark:text-cyan-400">Ера</h1>
-          <div className="flex items-center gap-2 text-sm text-gray-600 dark:text-gray-300">
-            <FaMapMarkerAlt /> Алматы
-          </div>
-          <div className="flex items-center gap-2 text-sm text-gray-600 dark:text-gray-300">
-            <FaEnvelope /> your@email.com
-          </div>
-          <div className="flex items-center gap-2 text-sm text-gray-600 dark:text-gray-300">
-            <FaGithub /> @yourhandle
-          </div>
-        </header>
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 to-black text-white px-4 py-10 sm:px-6 lg:px-8">
+      <div className="max-w-4xl mx-auto">
+        <motion.header
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          className="text-center mb-12"
+        >
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold mb-6 tracking-wide leading-tight drop-shadow-lg">
+            Привет, я Era! 👋
+          </h1>
+          <p className="text-base sm:text-lg md:text-xl text-gray-300 max-w-xl mx-auto leading-relaxed tracking-wide">
+            Веб-разработчик • Программист • Начинающий фрилансер
+          </p>
+        </motion.header>
 
-        <section>
-          <h2 className="text-xl font-semibold flex items-center gap-2 text-cyan-700 dark:text-cyan-300"><FaGraduationCap /> Образование</h2>
-          <p>КазНУ им. Аль-Фараби, ИТ факультет (2 курс)</p>
-        </section>
+        <motion.section
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.3, duration: 0.6 }}
+          className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12"
+        >
+          <Card className="bg-gray-800 border-none">
+          <CardContent className="p-4 sm:p-6">
+              <h2 className="text-xl sm:text-2xl font-semibold mb-4 tracking-wide drop-shadow-md">
+                Обо мне
+              </h2>
+              <p className="text-gray-300 text-sm sm:text-base leading-relaxed tracking-wide">
+                Я студент 3 курса факультета информационных технологий КазНУ. Умею создавать сайты, Telegram-ботов, знаю C++, Python, JavaScript, SQL.
+              </p>
+            </CardContent>
+          </Card>
 
-        <section>
-          <h2 className="text-xl font-semibold flex items-center gap-2 text-cyan-700 dark:text-cyan-300"><FaBriefcase /> Опыт работы</h2>
-          <ul className="list-disc ml-6 space-y-1">
-            <li>Установщик линз, детейлинг-центр (2023)</li>
-            <li>Специалист отдела продаж (2023)</li>
-          </ul>
-        </section>
+          <Card className="bg-gray-800 border-none">
+          <CardContent className="p-4 sm:p-6">
+              <h2 className="text-xl sm:text-2xl font-semibold mb-4 tracking-wide drop-shadow-md">
+                Навыки
+              </h2>
+              <ul className="text-gray-300 list-disc list-inside space-y-2 text-sm sm:text-base leading-relaxed tracking-wide">
+                <li>HTML, CSS, Tailwind, React</li>
+                <li>Node.js, Express, MongoDB</li>
+                <li>Git, GitHub, Vercel, Railway</li>
+                <li>Создание Telegram-ботов</li>
+              </ul>
+            </CardContent>
+          </Card>
+        </motion.section>
 
-        <section>
-          <h2 className="text-xl font-semibold flex items-center gap-2 text-cyan-700 dark:text-cyan-300"><FaCode /> Проекты</h2>
-          <ul className="list-disc ml-6 space-y-1">
-            <li>2-3 сайта: HTML, CSS, JavaScript</li>
-            <li>Telegram-боты на Python</li>
-          </ul>
-        </section>
-
-        <section>
-          <h2 className="text-xl font-semibold flex items-center gap-2 text-cyan-700 dark:text-cyan-300"><FaBrain /> Навыки</h2>
-          <p>Python, Java, C++, HTML, CSS, JavaScript, SQL, Git</p>
-        </section>
-
-        <section>
-          <h2 className="text-xl font-semibold flex items-center gap-2 text-cyan-700 dark:text-cyan-300"><FaGlobe /> Языки</h2>
-          <p>Казахский (родной), Русский (свободно), Английский (Pre-Intermediate)</p>
-          <p>Готов к работе онлайн и офлайн (график 2/2)</p>
-        </section>
+        <motion.section
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.6, duration: 0.6 }}
+          className="text-center"
+        >
+          <h2 className="text-xl sm:text-2xl font-semibold mb-6 tracking-wide drop-shadow-md">Связаться со мной</h2>
+          <p className="text-gray-300 mb-6 text-sm sm:text-base leading-relaxed tracking-wide">Готов к новым проектам и предложениям!</p>
+          <Button className="bg-white text-black hover:bg-gray-200 px-6 py-3 sm:px-8 sm:py-4 rounded-lg font-semibold shadow-md transition duration-300">
+            Написать в Telegram
+          </Button>
+        </motion.section>
       </div>
     </div>
   );
