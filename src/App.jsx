@@ -28,7 +28,7 @@ export default function ResumeLanding() {
           className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12"
         >
           <Card className="bg-gray-800 border-none">
-          <CardContent className="p-4 sm:p-6">
+            <CardContent className="p-4 sm:p-6">
               <h2 className="text-xl sm:text-2xl font-semibold mb-4 tracking-wide drop-shadow-md">
                 Обо мне
               </h2>
@@ -39,7 +39,7 @@ export default function ResumeLanding() {
           </Card>
 
           <Card className="bg-gray-800 border-none">
-          <CardContent className="p-4 sm:p-6">
+            <CardContent className="p-4 sm:p-6">
               <h2 className="text-xl sm:text-2xl font-semibold mb-4 tracking-wide drop-shadow-md">
                 Навыки
               </h2>
